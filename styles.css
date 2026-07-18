@@ -1,4 +1,4 @@
-:root {
+}:root {
   --primary: #2f2fff;
   --text: #111;
   --gray: #666;
@@ -68,7 +68,7 @@ body {
 
 /* BUTTONS */
 .btn-primary {
-  background: var(--primary);
+  background: --blue(--primary);
   color: white;
   padding: 10px 18px;
   border-radius: 10px;
@@ -77,7 +77,7 @@ body {
 }
 
 .btn-outline {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   background: transparent;
   padding: 10px 18px;
   border-radius: 10px;
@@ -228,7 +228,7 @@ body {
 
 /* ANIMATION */
 .fade-in {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
@@ -261,4 +261,62 @@ body {
     flex-direction: column;
     text-align: center;
   }
+}
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+}
+
+/* TEXT ANIMATION (START HIDDEN) */
+.hero-content {
+  opacity: 1;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* WHEN ACTIVE */
+.hero-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  background-color: blue(2, 31, 246);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #2f27fe;
+}
+/* Primary buttons (Email Me, Let's Talk) */
+.btn-primary {
+  background-color: blue;
+  color: white;
+  border: 1px;
+}
+
+/* Optional: hover effect */
+.btn-primary:hover {
+  background-color: #5375fe;
+}
+
+/* Secondary button (Download CV) */
+.btn-secondary {
+  background-color: transparent; 
+  color: #050606;
+  border: 1px solid #121213; 
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+/* Optional: hover effect */
+.btn-secondary:hover {
+  background-color: rgb(67, 65, 65)
 }

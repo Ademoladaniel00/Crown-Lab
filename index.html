@@ -8,7 +8,9 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- FIXED CSS PATH -->
+<head>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -23,7 +25,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="btn-primary">Let's Talk</button>
+<a href="#" class="btn-primary">Let's Talk</a>
 </nav>
 
 <!-- HERO -->
@@ -33,8 +35,8 @@
     <p>UI/UX & Graphic Designer focused on user-centered, scalable product design.</p>
 
     <div class="hero-buttons">
-      <button class="btn-primary">View Works</button>
-      <button class="btn-outline">Download CV</button>
+   <a href="#" class="btn-primary">View Works</a>
+   <a href="#" class="btn-secondary">Download CV</a>
     </div>
 
     <div class="stats">
@@ -46,7 +48,8 @@
   </div>
 
   <div class="hero-image">
-    <img src="img/IMG_2740.JPG">
+    <!-- ✅ Added alt -->
+    <img src="img/IMG_2740.JPG" alt="Profile image">
   </div>
 </section>
 
@@ -60,13 +63,13 @@
   <div class="project-cards">
 
     <div class="project" onclick="openModal('CrownPay', 'Fintech website UI design')">
-      <img src="img/Hero section.png">
+      <img src="img/Hero section.png" alt="CrownPay project">
       <h3>CrownPay</h3>
       <p>Fintech website</p>
     </div>
 
     <div class="project" onclick="openModal('Apscale', 'E-commerce design project')">
-      <img src="img/onboarding.png">
+      <img src="img/onboarding.png" alt="Apscale project">
       <h3>Apscale</h3>
       <p>Online store</p>
     </div>
@@ -76,23 +79,27 @@
 
 <!-- ABOUT -->
 <section id="about" class="about container fade-in">
-  <img src="img/IMG_0830.JPG (1).jpeg">
+  <!-- ✅ FIXED IMAGE NAME (RENAME FILE TO about.jpg) -->
+  <img src="img/about.jpeg">
+
   <div>
     <h3>About Me</h3>
-    <p>I design experiences that people enjoy using.
+    <p>
+      I design experiences that people enjoy using.
 
-I’m Ogunfolabi Ademola T., a UI/UX designer at Crown Lab, focused on building modern, user-first digital products that are simple, functional, and visually compelling.
+      I’m Ogunfolabi Ademola T., a UI/UX designer at Crown Lab, focused on building modern, user-first digital products that are simple, functional, and visually compelling.
 
-My approach blends design thinking, research, and real-world user behavior to create interfaces that don’t just exist—but perform.
+      My approach blends design thinking, research, and real-world user behavior to create interfaces that don’t just exist—but perform.
 
-Whether it’s a startup idea, product redesign, or full experience build, I help turn concepts into polished, usable products.</p>
+      Whether it’s a startup idea, product redesign, or full experience build, I help turn concepts into polished, usable products.
+    </p>
   </div>
 </section>
 
 <!-- CTA -->
 <section id="contact" class="cta fade-in">
   <h2>Let’s Build Smart Product Together</h2>
-  <button class="btn-primary">Email Me</button>
+  <a href="#" class="btn-primary">Email Me</a>
 </section>
 
 <!-- MODAL -->
@@ -105,31 +112,7 @@ Whether it’s a startup idea, product redesign, or full experience build, I hel
 </div>
 
 <!-- JS -->
-<script>
-/* FADE IN ANIMATION */
-const elements = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-elements.forEach(el => observer.observe(el));
-
-/* MODAL */
-function openModal(title, desc) {
-  document.getElementById('modal').style.display = 'flex';
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-desc').innerText = desc;
-}
-
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
-</script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
