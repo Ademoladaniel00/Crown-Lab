@@ -1,43 +1,111 @@
-// ✅ Put it right at the top
+/* =========================================
+   CROWN LAB JAVASCRIPT
+========================================= */
 
-// MAKE SURE JS IS CONNECTED
-console.log("JS Connected ✅");
+console.log("Crown Lab JS Connected 🚀");
 
-// FADE-IN ON LOAD
-window.addEventListener("load", () => {
-  document.querySelector(".hero-content").classList.add("show");
-});
-// FADE IN ANIMATION
-const elements = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
+/* =========================================
+   FADE-IN ANIMATION
+========================================= */
 
-elements.forEach(el => observer.observe(el));
+const fadeElements = document.querySelectorAll(".fade-in");
 
-// MODAL
-function openModal(title, desc) {
-  document.getElementById('modal').style.display = 'flex';
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-desc').innerText = desc;
-}
+const observer = new IntersectionObserver(
+  (entries) => {
 
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
+    entries.forEach((entry) => {
 
-// SMOOTH SCROLL
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("show");
+
+      }
+
     });
-  });
+
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+
+fadeElements.forEach((element) => {
+
+  observer.observe(element);
+
 });
-console.log("CrownLab 2.0 🚀");
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks.forEach((link) => {
+
+  link.addEventListener("click", function () {
+
+    navLinks.forEach((navLink) => {
+
+      navLink.classList.remove("active");
+
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
+
+
+/* =========================================
+   UPDATE ACTIVE NAV LINK WHILE SCROLLING
+========================================= */
+
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+
+  let currentSection = "";
+
+  sections.forEach((section) => {
+
+    const sectionTop = section.offsetTop - 150;
+
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+
+      currentSection = section.getAttribute("id");
+
+    }
+
+  });
+
+
+  navLinks.forEach((link) => {
+
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${currentSection}`) {
+
+      link.classList.add("active");
+
+    }
+
+  });
+
+});
+
+
+/* =========================================
+   CLOSE MOBILE / OTHER INTERACTIONS
+========================================= */
+
+console.log("Crown Lab 2.0 is ready ✅");

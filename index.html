@@ -3,116 +3,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crown Lab</title>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Crown Lab | UI/UX & Graphic Designer</title>
 
-  <!-- FIXED CSS PATH -->
-<head>
- <link rel="stylesheet" href="styles.css">
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
+
 <body>
 
-<div class="bg-shapes"></div>
+  <!-- BACKGROUND SHAPES -->
+  <div class="bg-shapes"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <h1 class="logo">Crown Lab</h1>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-<a href="#" class="btn-primary">Let's Talk</a>
-</nav>
 
-<!-- HERO -->
-<section class="hero container fade-in">
-  <div class="hero-text">
-    <h1>I design intuitive digital experiences.</h1>
-    <p>UI/UX & Graphic Designer focused on user-centered, scalable product design.</p>
+  <!-- ================= NAVBAR ================= -->
 
-    <div class="hero-buttons">
-   <a href="#" class="btn-primary">View Works</a>
-   <a href="#" class="btn-secondary">Download CV</a>
+  <nav class="navbar">
+
+    <div class="navbar-inner">
+
+      <a href="#home" class="logo">
+        Crown Lab
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#projects">Work</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- WHATSAPP BUTTON -->
+      <a
+        href="https://wa.me/2349123995035"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary nav-button"
+      >
+        Let's Talk
+      </a>
+
     </div>
 
-    <div class="stats">
-      <div><strong>4+</strong><span>Years Experience</span></div>
-      <div><strong>UI/UX</strong><span>Design</span></div>
-      <div><strong>Figma</strong><span>Expert</span></div>
-      <div><strong>Problem</strong><span>Solver</span></div>
-    </div>
-  </div>
+  </nav>
 
-  <div class="hero-image">
-    <!-- ✅ Added alt -->
-    <img src="img/IMG_2740.JPG" alt="Profile image">
-  </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects" class="projects container fade-in">
-  <div class="projects-header">
-    <h2>Featured Projects</h2>
-    <a href="#">View all</a>
-  </div>
+  <!-- ================= HERO ================= -->
 
-  <div class="project-cards">
+  <main id="home">
 
-    <div class="project" onclick="openModal('CrownPay', 'Fintech website UI design')">
-      <img src="img/Hero section.png" alt="CrownPay project">
-      <h3>CrownPay</h3>
-      <p>Fintech website</p>
-    </div>
+    <section class="hero container fade-in">
 
-    <div class="project" onclick="openModal('Apscale', 'E-commerce design project')">
-      <img src="img/onboarding.png" alt="Apscale project">
-      <h3>Apscale</h3>
-      <p>Online store</p>
-    </div>
+      <div class="hero-text">
 
-  </div>
-</section>
+        <h1>
+          I Design Intuitive Digital Experiences.
+        </h1>
 
-<!-- ABOUT -->
-<section id="about" class="about container fade-in">
-  <!-- ✅ FIXED IMAGE NAME (RENAME FILE TO about.jpg) -->
-  <img src="img/about.jpeg">
+        <p>
+          UI/UX & Graphic Designer focused on user-centered,
+          scalable product design.
+        </p>
 
-  <div>
-    <h3>About Me</h3>
-    <p>
-      I design experiences that people enjoy using.
+        <div class="hero-buttons">
 
-      I’m Ogunfolabi Ademola T., a UI/UX designer at Crown Lab, focused on building modern, user-first digital products that are simple, functional, and visually compelling.
+          <a href="#projects" class="btn-primary">
+            View Works
+          </a>
 
-      My approach blends design thinking, research, and real-world user behavior to create interfaces that don’t just exist—but perform.
+          <!-- CHANGE THIS TO YOUR ACTUAL CV FILE -->
+          <a
+            href="https://eu.wps.com/l/cbOakkWSfaWTxExo?sa=S3&st=0"
+            target="_blank"
+            download
+            class="btn-secondary"
+          >
+            ↓ Download CV
+          </a>
 
-      Whether it’s a startup idea, product redesign, or full experience build, I help turn concepts into polished, usable products.
-    </p>
-  </div>
-</section>
+        </div>
 
-<!-- CTA -->
-<section id="contact" class="cta fade-in">
-  <h2>Let’s Build Smart Product Together</h2>
-  <a href="#" class="btn-primary">Email Me</a>
-</section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal()" class="close">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-desc"></p>
-  </div>
-</div>
+        <!-- STATS -->
 
-<!-- JS -->
-<script src="js/app.js"></script>
+        <div class="stats">
+
+          <div>
+            <strong>4+</strong>
+            <span>Years Experience</span>
+          </div>
+
+          <div>
+            <strong>UI/UX</strong>
+            <span>Design</span>
+          </div>
+
+          <div>
+            <strong>Figma</strong>
+            <span>Expert</span>
+          </div>
+
+          <div>
+            <strong>Problem</strong>
+            <span>Solver</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO IMAGE -->
+
+      <div class="hero-image">
+
+        <img
+          src="img/IMG_2740.JPG"
+          alt="Crown Lab designer"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED PROJECTS ================= -->
+
+    <section
+      id="projects"
+      class="projects container fade-in"
+    >
+
+      <div class="projects-header">
+
+        <h2>
+          Featured Projects
+        </h2>
+
+        <!-- VIEW ALL -->
+        <a href="#all-projects" class="view-all">
+          View all →
+        </a>
+
+      </div>
+
+
+      <div class="project-cards">
+
+
+        <!-- CROWNPAY -->
+
+        <article class="project">
+
+          <a
+            href="https://www.figma.com/design/tQNUGE54Xvi5mSqsrJkzgk/Crown-Lab?node-id=66-108&t=Fbg3qZoNCPeIslck-11"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+
+            <img
+              src="img/Hero section.png"
+              alt="CrownPay fintech website UI design"
+            >
+
+          </a>
+
+          <h3>
+            CrownPay
+          </h3>
+
+          <p>
+            Fintech website
+          </p>
+
+          <a
+            href="https://www.figma.com/design/tQNUGE54Xvi5mSqsrJkzgk/Crown-Lab?node-id=66-108&t=Fbg3qZoNCPeIslck-11"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-view"
+          >
+            View Figma →
+          </a>
+
+        </article>
+
+
+        <!-- APSCALE -->
+
+        <article class="project">
+
+          <a
+            href="https://www.figma.com/proto/LXX9pwJ1dRaFzBoKbzpLRN/Apscale?node-id=0-1&t=NLDwrc9jMLzAFE9f-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+
+            <img
+              src="img/onboarding.png"
+              alt="Apscale e-commerce design"
+            >
+
+          </a>
+
+          <h3>
+            Apscale
+          </h3>
+
+          <p>
+            Online store
+          </p>
+
+          <a
+            href="https://www.figma.com/proto/LXX9pwJ1dRaFzBoKbzpLRN/Apscale?node-id=0-1&t=NLDwrc9jMLzAFE9f-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-view"
+          >
+            View Figma →
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= ALL PROJECTS ================= -->
+
+    <section
+      id="all-projects"
+      class="all-projects container fade-in"
+    >
+
+      <div class="section-title">
+
+        <span>
+          MY WORK
+        </span>
+
+        <h2>
+          Featured Projects
+        </h2>
+
+        <p>
+          A selection of UI/UX, product and graphic design
+          projects I've worked on.
+        </p>
+
+      </div>
+
+
+      <div class="all-project-grid">
+
+
+        <!-- CROWNPAY -->
+
+        <article class="large-project">
+
+          <a
+            href="https://www.figma.com/design/tQNUGE54Xvi5mSqsrJkzgk/Crown-Lab?node-id=66-108&t=Fbg3qZoNCPeIslck-11"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <img
+              src="img/Hero section.png"
+              alt="CrownPay project"
+            >
+
+          </a>
+
+          <div class="project-info">
+
+            <div>
+
+              <h3>
+                CrownPay
+              </h3>
+
+              <p>
+                Fintech Website UI/UX
+              </p>
+
+            </div>
+
+            <a
+              href="https://www.figma.com/design/tQNUGE54Xvi5mSqsrJkzgk/Crown-Lab?node-id=66-108&t=Fbg3qZoNCPeIslck-11"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-view"
+            >
+              View Project →
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- APSCALE -->
+
+        <article class="large-project">
+
+          <a
+            href="https://www.figma.com/proto/LXX9pwJ1dRaFzBoKbzpLRN/Apscale?node-id=0-1&t=NLDwrc9jMLzAFE9f-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <img
+              src="img/onboarding.png"
+              alt="Apscale project"
+            >
+
+          </a>
+
+          <div class="project-info">
+
+            <div>
+
+              <h3>
+                Apscale
+              </h3>
+
+              <p>
+                E-commerce UI/UX Design
+              </p>
+
+            </div>
+
+            <a
+              href="https://www.figma.com/proto/LXX9pwJ1dRaFzBoKbzpLRN/Apscale?node-id=0-1&t=NLDwrc9jMLzAFE9f-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-view"
+            >
+              View Project →
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- MUNCH YARD -->
+
+        <article class="large-project">
+
+          <a
+            href="https://www.figma.com/design/NtxPX83iWDwmkuRy76gADP/Munch-Yard?node-id=0-1&m=dev&t=86MS6TIqtABpDfcQ-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <img
+              src="img/Munch yard banner .PNG"
+              alt="Munch yard project"
+            >
+
+          </a>
+
+          <div class="project-info">
+
+            <div>
+
+              <h3>
+                Munch yard
+              </h3>
+
+              <p>
+                Food Delivery app
+              </p>
+
+            </div>
+
+            <a
+              href="https://www.figma.com/design/NtxPX83iWDwmkuRy76gADP/Munch-Yard?node-id=0-1&m=dev&t=86MS6TIqtABpDfcQ-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-view"
+            >
+              View Project →
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+    
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      id="about"
+      class="about container fade-in"
+    >
+
+      <img
+        src="img/about.jpeg"
+        alt="About Ogunfolabi Ademola"
+      >
+
+      <div>
+
+        <span class="section-label">
+          ABOUT ME
+        </span>
+
+        <h2>
+          Designing experiences that people enjoy using.
+        </h2>
+
+        <p>
+          I’m Ogunfolabi Ademola T., a UI/UX designer at
+          Crown Lab, focused on building modern, user-first
+          digital products that are simple, functional,
+          and visually compelling.
+        </p>
+
+        <p>
+          My approach blends design thinking, research,
+          and real-world user behavior to create interfaces
+          that don’t just exist — but perform.
+        </p>
+
+        <p>
+          Whether it’s a startup idea, product redesign,
+          or full experience build, I help turn concepts
+          into polished, usable products.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section
+      id="contact"
+      class="cta container fade-in"
+    >
+
+      <h2>
+        Let's Build Smart Products Together
+      </h2>
+
+      <p>
+        Have a project in mind? Let's talk.
+      </p>
+
+      <!-- CONTACT / SOCIAL BUTTONS -->
+      <div class="contact-buttons">
+
+       <!-- EMAIL -->
+     <a
+       href="mailto:crownlab.001@gmail.com"
+       class="btn-primary email-button"
+     >
+      ✉️ Email Me
+     </a>
+
+       <!-- LINKEDIN -->
+     <a
+       href="https://www.linkedin.com/in/ogunfolabi-ademola"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-primary social-button"
+      >
+         <i class="fa-brands fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+      </a>
+
+       <!-- BEHANCE -->
+     <a
+       href="https://www.behance.net/ogunfolademola"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-primary social-button"
+     >
+      <i class="fa-brands fa-behance"></i>
+        <span>Behance</span>
+      </a>
+
+     </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
 
 </body>
 </html>
